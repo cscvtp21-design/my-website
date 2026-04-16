@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shahid Bappas | Graphic Designer & Online Services</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;800&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <a href="#" class="logo">
+            <img src="assets/logo.jpg" alt="Logo">
+        </a>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1><span class="small-text">Hi, I'm</span> <span>Shahid Naranchirakkal</span></h1>
+            <p>Professional Graphic Designer & Online Services Expert.</p>
+            <p>I create visual experiences that leave a lasting impression.</p>
+            <div class="hero-buttons">
+                <a href="#services" class="btn">My Services</a>
+                <a href="#contact" class="btn btn-outline">Contact Me</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="section-title">
+            <h2>About Me</h2>
+        </div>
+        <div class="about">
+            <div class="about-img">
+                <img src="assets/shahid.jpg" alt="Shahid Bappas"
+                    style="width: 75%; height: 400px;  border-radius: 20px; display: block; margin-left: auto;">
+            </div>
+            <div class="about-text">
+                <h3>Creative Designer & Problem Solver</h3>
+                <p>Hello! I am Shahid Bappas, a passionate Graphic Designer with a knack for creating stunning visuals
+                    that communicate ideas effectively. With experience in various online services, I help businesses
+                    and individuals establish a strong digital presence.</p>
+                <p>My approach combines creativity with functionality, ensuring that every design not only looks good
+                    but also serves its purpose. Whether you need a brand identity, marketing materials, or digital
+                    assets, I'm here to bring your vision to life.</p>
+                <div class="skills">
+                    <p><strong>Skills:</strong> Photoshop, CorelDRAW, Figma, Illustrator, AI Tools, Canva, Web Design,
+                        Branding, Social Media Graphics.</p>
+                </div>
+                <br>
+                <a href="#contact" class="btn">Work With Me</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="section-title">
+            <h2>My Services</h2>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-pen-nib"></i>
+                </div>
+                <h3>Graphic Design</h3>
+                <p>Logo design, brochures, flyers, and marketing materials tailored to your brand identity.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-desktop"></i>
+                </div>
+                <h3>Web Design UI/UX</h3>
+                <p>Modern and user-friendly website interfaces that engage visitors and convert leads.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-share-alt"></i>
+                </div>
+                <h3>Social Media Graphics</h3>
+                <p>Eye-catching posts and banners for Instagram, Facebook, LinkedIn, and more.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <h3>Online Services</h3>
+                <p>data entry, document formatting, and other professional online assistance.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="section-title">
+            <h2>Get In Touch</h2>
+        </div>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>shahidbappas@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+91 9744822998</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Kadalundi, Calicut</span>
+                </div>
+                <p>Feel free to reach out for collaborations or just a friendly chat about design!</p>
+            </div>
+            <form class="contact-form" name="contact" method="POST" data-netlify="true" action="/success.html">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-links">
+            <a href="https://www.facebook.com/Shahidbappaschaliyam" target="_blank"><i
+                    class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <div class="copyright">
+            <p>&copy;2026 Proudly powered by | Shahid Naranchirakkal - Bappas Group</p>
+        </div>
+    </footer>
+
+    <!-- Advertisement Popup -->
+    <div id="ad-popup-overlay" class="ad-popup-overlay">
+        <div class="ad-popup">
+            <button id="ad-popup-close" class="ad-popup-close" aria-label="Close popup">&times;</button>
+
+
+            <h2 class="ad-popup-title">Welcome!!!</h2>
+            <p class="ad-popup-text">SHAHID NARANCHIRAKKAL <br>KADALUNDI <br> Call & WhatsApp: 9744822998</p>
+            <div class="ad-popup-features">
+                <span><i class="fas fa-check-circle"></i> Logo Design</span>
+                <span><i class="fas fa-check-circle"></i> Web Design</span>
+                <span><i class="fas fa-check-circle"></i> Branding</span>
+            </div>
+
+            <div class="ad-popup-emblem">
+                <img src="assets/bappas.png" alt="Emblem">
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>

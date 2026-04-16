@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submitted | Shahid Bappas</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;800&display=swap"
+        rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #0d0d0d;
+            color: #000000;
+            font-family: 'Inter', sans-serif;
+            text-align: center;
+        }
+
+        .success-box {
+            background: rgb(0, 0, 0);
+            border: 3px solid rgb(255, 2, 150);
+            border-radius: 20px;
+            padding: 50px 40px;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+        }
+
+        .success-box h1 {
+            font-family: 'Outfit', sans-serif;
+            color: #00ff73;
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+        }
+
+        .success-box p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            color: #ffffff;
+        }
+
+        .btn-home {
+            display: inline-block;
+            background: #e5ff00;
+            color: #0d0d0d;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-home:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(229, 255, 0, 0.3);
+            background: #fc41b4;
+            color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="success-box">
+        <h1 id="success-title">Thank you!</h1>
+        <p>Your form submission has been received and we will connect you later.</p>
+        <a href="/" class="btn-home">Back to my site Shahid Bappas</a>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const name = sessionStorage.getItem('submittedName');
+            if (name) {
+                // If the user's name is available, update the title to include it
+                document.getElementById('success-title').textContent = `Thank you ${name}!`;
+                // Clear it so it doesn't persist on subsequent page refreshes
+                sessionStorage.removeItem('submittedName');
+            }
+        });
+    </script>
+</body>
+
+</html>
