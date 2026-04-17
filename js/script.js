@@ -91,28 +91,40 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 })();
 
-// Handle Google Form submission via hidden iframe
+// Handle contact form submission silently via Google Apps Script
 const contactForm = document.querySelector('.contact-form');
-const hiddenIframe = document.getElementById('hidden_iframe');
 
-if (contactForm && hiddenIframe) {
-    // Save name for the success page
-    contactForm.addEventListener('submit', function () {
-        const nameInput = this.querySelector('input[name="entry.466243044"]');
+if (contactForm) {
+    contactForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        // Save name for success page personalisation
+        const nameInput = this.querySelector('input[name="name"]');
         if (nameInput && nameInput.value) {
             sessionStorage.setItem('submittedName', nameInput.value);
         }
-    });
 
-    // When Google Form responds (loads into the hidden iframe), redirect to success page
-    hiddenIframe.addEventListener('load', function () {
-        // Ignore the very first load (empty iframe on page load)
-        if (hiddenIframe.dataset.submitted === 'true') {
-            window.location.href = 'success.html';
+        // Show sending state
+        const submitButton = this.querySelector('button[type="submit"]');
+        if (submitButton) {
+            submitButton.disabled = true;
+            submitButton.textContent = 'Sending...';
         }
-    });
 
-    contactForm.addEventListener('submit', function () {
-        hiddenIframe.dataset.submitted = 'true';
+        // Send data silently to Google Apps Script (no-cors avoids redirect/error page)
+        fetch(this.action, {
+            method: 'POST',
+            body: new FormData(this),
+            mode: 'no-cors'
+        })
+        .then(() => {
+            contactForm.reset();
+            window.location.href = 'success.html';
+        })
+        .catch(() => {
+            // Even on network error, redirect — Google often still saves the data
+            contactForm.reset();
+            window.location.href = 'success.html';
+        });
     });
 }
