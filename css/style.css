@@ -257,12 +257,12 @@ section {
 }
 
 .about-img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
+    width: 279px;
+    height: 346px;
+    border-radius: 59%;
     overflow: hidden;
     border: 5px solid #fff;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     flex-shrink: 0;
 }
 
